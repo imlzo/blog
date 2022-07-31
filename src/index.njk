@@ -9,7 +9,10 @@ title: The Best Eleventy Demo TM
 
 <ul>
 {% for post in collections.post %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+  <li>
+    <span>{{ post.date | postDate }}</span>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  </li>
 {% endfor %}
 </ul>
 
