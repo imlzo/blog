@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: The Best Eleventy Demo TM
+---
+
+
+<h1>Yo Eleventy</h1>
+<p>This site rocks</p>
+
+<ul>
+{% for post in collections.post %}
+  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+{% endfor %}
+</ul>
+
