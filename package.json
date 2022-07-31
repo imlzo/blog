@@ -1,13 +1,17 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "imlzo blog",
   "main": "index.js",
   "scripts": {
+    "build": "npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "imlzo",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"

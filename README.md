@@ -5,7 +5,14 @@ Personal blog
 ## Building
 
 ```sh
-$ npx @11ty/eleventy
-$ npx @11ty/eleventy --serve
+# Building
+$ npm run build
+$ npm run debug     # build with DEBUG logs
+```
+
+## Development
+
+```sh
+$ npm run serve
 ```
 

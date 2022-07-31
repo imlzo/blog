@@ -1,7 +1,9 @@
+### custom ###
+
+_site
+
 # Created by https://www.toptal.com/developers/gitignore/api/macos,javascript,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,javascript,node
-
-#!! ERROR: javascript is undefined. Use list command to see defined gitignore types !!#
 
 ### macOS ###
 # General
