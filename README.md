@@ -4,9 +4,9 @@ Personal blog
 
 ## TODOs
 
-- [ ] Feature complete in terms of functionality
-- [ ] Tag based collections
 - [ ] Tag links within articles
+- [ ] Syntax highlighting in code blocks
+- [ ] Tag based collections
 - [ ] Style home page
 - [ ] Style articles
 - [ ] Edit `whoami` page
