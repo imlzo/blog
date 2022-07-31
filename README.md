@@ -32,6 +32,5 @@ $ npm run serve
 ## Template
 
 - `base.njk`:       Base template. Contains headers and footers.
-- `post.njk`:       Post template. Extends `base.njk`
-
+- `post.njk`:       Post template. Has post heading. Extends `base.njk`
 
