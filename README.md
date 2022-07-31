@@ -4,7 +4,6 @@ Personal blog
 
 ## TODOs
 
-- [ ] Use eleventyNavigation for nav
 - [ ] Feature complete in terms of functionality
 - [ ] Tag based collections
 - [ ] Tag links within articles

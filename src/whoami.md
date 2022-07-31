@@ -1,6 +1,9 @@
 ---
 layout: base.njk
 title: whoami
+eleventyNavigation:
+  key: whoami
+  order: 2
 ---
 
 # whoami
