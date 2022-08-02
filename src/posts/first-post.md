@@ -1,5 +1,8 @@
 ---
 title: First Post!
+tags:
+    - blog
+    - development
 ---
 
 # Welcome

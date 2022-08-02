@@ -4,13 +4,14 @@ Personal blog
 
 ## TODOs
 
-- [ ] Tag links within articles
-- [ ] Syntax highlighting in code blocks
-- [ ] Tag based collections
-- [ ] Style home page
-- [ ] Style articles
-- [ ] Edit `whoami` page
-- [ ] Deploy to interwebs
+TODO: Build a page OF tags
+TODO: Tag links within articles (WIP)
+TODO: Syntax highlighting in code blocks
+TODO: Tag based collections
+TODO: Style home page
+TODO: Style articles
+TODO: Edit `whoami` page
+TODO: Deploy to interwebs
 
 ## Building
 
