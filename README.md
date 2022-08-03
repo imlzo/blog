@@ -4,7 +4,6 @@ Personal blog
 
 ## TODOs
 
-TODO: Find wiki notes to promote to blog posts
 TODO: First blog post
 TODO: Edit `whoami` page
 TODO: Style home page
