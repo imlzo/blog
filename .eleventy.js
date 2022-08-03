@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("filteredTags", filteredTags)
   eleventyConfig.addFilter("allTags", allTags)
   eleventyConfig.addFilter("postDate", postDate);
+  eleventyConfig.addFilter("htmlDate", htmlDate);
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy("src/css");
@@ -44,5 +45,11 @@ function filteredTags(tags) {
 
 // Given date, returns display date for post
 function postDate(jsDate) {
-    return DateTime.fromJSDate(jsDate).toFormat("yyyy-MM-dd");
+  return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat("yyyy LLL dd");
 }
+
+// Given date, returns HTML date format
+function htmlDate(jsDate) {
+  return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+}
+

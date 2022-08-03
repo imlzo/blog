@@ -19,7 +19,6 @@ permalink: /tags/{{ tag | slugify }}/
 
 <h1>Posts tagged "{{ tag }}"</h1>
 
-<!-- TODO: Make post-list component? -->
 <ul>
   {% set taglist = collections[tag] %}
   {% for post in taglist | reverse %}

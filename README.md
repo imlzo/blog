@@ -4,11 +4,11 @@ Personal blog
 
 ## TODOs
 
-TODO: Tag links within articles
 TODO: Syntax highlighting in code blocks
 TODO: Style home page
 TODO: Style articles
 TODO: Edit `whoami` page
+TODO: First blog post
 TODO: Deploy to interwebs
 
 ## Building

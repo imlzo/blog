@@ -2,4 +2,12 @@
 layout: base.njk
 ---
 
+<time datetime="{{ page.date | htmlDate }}">{{ page.date | postDate }}</time>
+<h1>{{ title }}</h1>
+{% for tag in collections.all | allTags | filteredTags %}
+  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+  <a href="{{ tagUrl | url }}">{{ tag }}</a>
+{% endfor %}
+
 {{ content | safe }}
+
