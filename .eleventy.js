@@ -5,14 +5,13 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Filters
+  eleventyConfig.addFilter("filteredTags", filteredTags)
+  eleventyConfig.addFilter("allTags", allTags)
+  eleventyConfig.addFilter("postDate", postDate);
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy("src/css");
-
-  // postDate filter - Date for posts
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
-  });
 
   return {
     dir: {
@@ -22,4 +21,28 @@ module.exports = function(eleventyConfig) {
       output: "_site"
     }
   };
+}
+
+/*
+ * Tags
+ */
+
+// Returns all unique tags for collection of posts
+function allTags(posts) {
+  const allTags = new Set();
+  for (const p of posts) {
+    (p.data.tags || []).forEach(t => allTags.add(t));
+  }
+  return Array.from(allTags);
+}
+
+// Returns a set of tags where non-user-facing tags are filtered
+function filteredTags(tags) {
+  const filtered = ["all", "post"];
+  return (tags || []).filter(tag => filtered.indexOf(tag) === -1);
+}
+
+// Given date, returns display date for post
+function postDate(jsDate) {
+    return DateTime.fromJSDate(jsDate).toFormat("yyyy-MM-dd");
 }

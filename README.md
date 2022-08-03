@@ -4,10 +4,8 @@ Personal blog
 
 ## TODOs
 
-TODO: Build a page OF tags
-TODO: Tag links within articles (WIP)
+TODO: Tag links within articles
 TODO: Syntax highlighting in code blocks
-TODO: Tag based collections
 TODO: Style home page
 TODO: Style articles
 TODO: Edit `whoami` page
@@ -30,8 +28,11 @@ $ npm run clean
 $ npm run serve
 ```
 
-## Template
+## Structure
 
+- `posts/*.md`:     Individual blog posts
 - `base.njk`:       Base template. Contains headers and footers.
 - `post.njk`:       Post template. Has post heading. Extends `base.njk`
+- `tags.njk`:       Page displaying all tags
+- `tag.njk`:        Template for specific tag
 
