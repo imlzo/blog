@@ -48,3 +48,5 @@ $ ./bin/blog_new "Title of post"
 
 Delete the `draft: true` front matter to publish in production.
 
+Edit existing drafts via `./bin/blog_edit`.
+

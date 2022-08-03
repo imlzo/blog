@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# blog_edit - Edit existing drafts
+#
+
+PROJ_ROOT=$(git rev-parse --show-toplevel)
+cd $PROJ_ROOT
+
+DRAFTS=$(rg "^draft: true" -l --glob 'src/posts/**' --sortr created)
+
+select f in $DRAFTS; do
+  if [ -z $f ]; then
+    exit 1
+  fi
+  $EDITOR $f
+  exit 0
+done
+
