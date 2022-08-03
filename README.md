@@ -1,14 +1,6 @@
 # Blog
 
-Personal blog
-
-## TODOs
-
-TODO: First blog post
-TODO: Edit `whoami` page
-TODO: Style home page
-TODO: Style articles
-TODO: Deploy to interwebs
+imlzo's personal blog
 
 ## Building
 
@@ -32,6 +24,7 @@ $ npm run serve:dev # serve for dev (w/ drafts)
 ## Structure
 
 - `posts/*.md`:     Individual blog posts.
+- `readme.md`:      README for website. Distinct from this README.md.
 - `base.njk`:       Base template. Contains headers and footers.
 - `post.njk`:       Post template. Has post heading. Extends `base.njk`
 - `tags.njk`:       Page displaying all tags
