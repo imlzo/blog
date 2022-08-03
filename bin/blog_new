@@ -38,9 +38,9 @@ fi
 cat > $POST <<EOF
 ---
 title: $TITLE
+date: $DATE
 tags:
     - todo
-date: $DATE
 draft: true
 ---
 
