@@ -4,7 +4,6 @@ Personal blog
 
 ## TODOs
 
-TODO: Support Drafts
 TODO: Find wiki notes to promote to blog posts
 TODO: First blog post
 TODO: Edit `whoami` page
@@ -39,8 +38,13 @@ $ npm run serve:dev # serve for dev (w/ drafts)
 - `tags.njk`:       Page displaying all tags
 - `tag.njk`:        Template for specific tag
 
-## Creating New Posts
+## Creating Posts
 
+Create new draft posts via `./bin/blog_new`.
 
+```sh
+$ ./bin/blog_new "Title of post"
+```
 
+Delete the `draft: true` front matter to publish in production.
 

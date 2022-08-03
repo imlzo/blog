@@ -1,0 +1,51 @@
+#!/usr/bin/env sh
+# blog_new - Creates a new blog post
+
+set -eu
+
+PROJ_ROOT=$(git rev-parse --show-toplevel)
+
+usage() {
+  cat <<EOF
+USAGE: blog_new "TITLE" - Creates a new draft blog post
+EOF
+}
+
+# Converts argument into lowercase, hyphenated, url slug
+slugify() {
+  echo "$1" | iconv -t ascii//TRANSLIT | sed -E "s/[~\^]+//g" | sed -E "s/[^a-zA-Z0-9]+/-/g" | sed -E "s/^-+\|-+$//g" | tr A-Z a-z
+}
+
+##########
+# main
+##########
+
+if [ $# -nq 1 ]; then
+  usage
+  exit
+fi
+
+TITLE="$1"
+POST_SLUG=$(slugify "$TITLE")
+POST="${PROJ_ROOT}/src/posts/${POST_SLUG}.md"
+DATE=$(date +"%F %T")
+
+if [ -f $POST ]; then
+  echo "Post already exists at $POST" >&2
+  exit 1
+fi
+
+cat > $POST <<EOF
+---
+title: $TITLE
+tags:
+    - todo
+date: $DATE
+draft: true
+---
+
+EOF
+
+if [ -n $EDITOR ]; then
+  $EDITOR $POST
+fi

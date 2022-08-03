@@ -41,7 +41,7 @@ function allTags(posts) {
 
 // Returns a set of tags where non-user-facing tags are filtered
 function filteredTags(tags) {
-  const filtered = ["all", "posts"];
+  const filtered = ["all", "posts", "todo"];
   return (tags || []).filter(tag => filtered.indexOf(tag) === -1);
 }
 
