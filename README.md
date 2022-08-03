@@ -31,7 +31,7 @@ $ npm run serve:dev # serve for dev (w/ drafts)
 
 ## Structure
 
-- `posts/*.md`:     Individual blog posts. Posts that start with `_` are drafts
+- `posts/*.md`:     Individual blog posts.
 - `base.njk`:       Base template. Contains headers and footers.
 - `post.njk`:       Post template. Has post heading. Extends `base.njk`
 - `tags.njk`:       Page displaying all tags
