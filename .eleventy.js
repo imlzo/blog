@@ -2,7 +2,6 @@ const { DateTime } = require("luxon");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-
 module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -42,7 +41,7 @@ function allTags(posts) {
 
 // Returns a set of tags where non-user-facing tags are filtered
 function filteredTags(tags) {
-  const filtered = ["all", "post"];
+  const filtered = ["all", "posts"];
   return (tags || []).filter(tag => filtered.indexOf(tag) === -1);
 }
 
@@ -55,4 +54,3 @@ function postDate(jsDate) {
 function htmlDate(jsDate) {
   return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 }
-

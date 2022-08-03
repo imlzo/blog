@@ -4,11 +4,13 @@
   "description": "imlzo blog",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "clean": "rm -rf _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":      "ELEVENTY_ENV='production' npx @11ty/eleventy",
+    "serve":      "ELEVENTY_ENV='production' npx @11ty/eleventy --serve",
+    "build:dev":  "ELEVENTY_ENV='development' npx @11ty/eleventy",
+    "serve:dev":  "ELEVENTY_ENV='development' npx @11ty/eleventy --serve",
+    "debug":      "DEBUG=Eleventy* npx @11ty/eleventy",
+    "clean":      "rm -rf _site",
+    "test":       "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "imlzo",
