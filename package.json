@@ -4,13 +4,16 @@
   "description": "imlzo blog",
   "main": "index.js",
   "scripts": {
-    "build":      "ELEVENTY_ENV='production' npx @11ty/eleventy",
-    "serve":      "ELEVENTY_ENV='production' npx @11ty/eleventy --serve",
-    "build:dev":  "ELEVENTY_ENV='development' npx @11ty/eleventy",
-    "serve:dev":  "ELEVENTY_ENV='development' npx @11ty/eleventy --serve",
-    "debug":      "DEBUG=Eleventy* npx @11ty/eleventy",
-    "clean":      "rm -rf _site",
-    "test":       "echo \"Error: no test specified\" && exit 1"
+    "build": "ELEVENTY_ENV='production' npx @11ty/eleventy",
+    "serve": "ELEVENTY_ENV='production' npx @11ty/eleventy --serve",
+    "build:dev": "ELEVENTY_ENV='development' npx @11ty/eleventy",
+    "serve:dev": "ELEVENTY_ENV='development' npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "clean": "rm -rf _site",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spellcheck": "npx cspell src/**",
+    "grammarcheck": "npx write-good src/**",
+    "check": "npm run spellcheck && npm run grammarcheck"
   },
   "keywords": [],
   "author": "imlzo",
@@ -18,6 +21,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0"
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "cspell": "^6.5.0"
   }
 }

@@ -1,0 +1,13 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "imlzo",
+        "eleventy",
+        "endfor",
+        "journaling",
+        "endset"
+    ],
+    "ignorePaths": ["node_modules/**"]
+}
+

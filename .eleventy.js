@@ -1,11 +1,14 @@
 const { DateTime } = require("luxon");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+
 
 module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   // Filters
   eleventyConfig.addFilter("filteredTags", filteredTags)

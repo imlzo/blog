@@ -42,3 +42,11 @@ Delete the `draft: true` front matter to publish in production.
 
 Edit existing drafts via `./bin/blog_edit`.
 
+There are some conveniences to check spelling and grammar:
+
+```sh
+$ npm run check
+$ npm run spellcheck
+$ npm run grammarcheck
+```
+

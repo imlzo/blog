@@ -18,8 +18,8 @@ permalink: /tags/{{ tag | slugify }}/
 <h1>Posts tagged "{{ tag }}"</h1>
 
 <ul>
-  {% set taglist = collections[tag] %}
-  {% for post in taglist | reverse %}
+  {% set tagList = collections[tag] %}
+  {% for post in tagList | reverse %}
   <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
   {% endfor %}
 </ul>
