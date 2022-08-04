@@ -9,7 +9,7 @@ eleventyNavigation:
 
 # README.md
 
-Hello world.
+Hello world!
 
 This is [imlzo](https://github.com/imlzo)'s blog. Glad to have you here. 
 
