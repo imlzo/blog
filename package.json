@@ -11,8 +11,8 @@
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "clean": "rm -rf _site",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "spellcheck": "npx cspell src/**",
-    "grammarcheck": "npx write-good src/**",
+    "spellcheck": "npx cspell src/**/*",
+    "grammarcheck": "npx write-good src/**/*",
     "check": "npm run spellcheck && npm run grammarcheck"
   },
   "keywords": [],

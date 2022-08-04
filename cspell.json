@@ -6,7 +6,9 @@
         "eleventy",
         "endfor",
         "journaling",
-        "endset"
+        "endset",
+        "datetime",
+        "stylesheet"
     ],
     "ignorePaths": ["node_modules/**"]
 }
