@@ -7,7 +7,7 @@ PROJ_ROOT=$(git rev-parse --show-toplevel)
 
 usage() {
   cat <<EOF
-USAGE: blog_new "TITLE" - Creates a new draft blog post
+Usage: blog_new "<title>" - Creates a new draft blog post
 EOF
 }
 
