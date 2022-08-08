@@ -10,4 +10,4 @@
 - favicons
 - Some minimal art. Maybe.
 - Update readme post with "about me" section, highlighting some core thoughts.
-
+- Support footnotes
