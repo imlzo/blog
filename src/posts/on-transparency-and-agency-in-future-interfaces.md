@@ -48,9 +48,9 @@ organ. Like my eyes and ears, it's the means I experience reality through:
 With future interfaces, technology is integrated even deeper as part of our
 perception - deeper than personal computers and smartphones ever have been.
 
-For something I rely on so intimately, I feel little agency in the technology I
-use everyday. It is often changed, optimized, and updated over-the-air entirely
-without my involvement or awareness.
+For something I rely on so intimately, I feel little agency over the technology
+I use everyday. It is often changed, optimized, and updated over-the-air
+entirely without my involvement or awareness.
 
 There is a fundamental asymmetry here. The information and means to intervene is
 disproportionately outside my hands.
@@ -124,7 +124,7 @@ Without being too sure, I want to focus my own time and money on technology that
 is transparent and responsible:
 
 *Transparent*, meaning technology that everyone can use, understand, and
-intervene with.
+intervene.
 
 *Responsible*, meaning technology that has people's best interests in mind.
 
