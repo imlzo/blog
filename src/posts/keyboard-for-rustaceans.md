@@ -43,7 +43,7 @@ For this keyboard to be exactly what I wanted, I only needed to make two
 modifications:
 
 - Customize the board shape for top edge to sit close to the keys.
-- Feature more Ferris art
+- Feature more Ferris art.
 
 While I've never used [KiCad](https://www.kicad.org/) before, I was able to
 kickstart off Ben Vallack's excellent video on [editing Sweep's project
