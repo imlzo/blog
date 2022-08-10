@@ -37,7 +37,9 @@
     <nav>
       <ul>
       {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
       {%- endfor %}
       </ul>
     </nav>
@@ -45,8 +47,8 @@
   <main>
   {{ content | safe }}
   </main>
-  <hr>
   <footer>
+    <hr>
     <a href="{{ metadata.github.blogRepoUrl }}">Source</a>.
     Built with <a href="https://www.11ty.dev/">11ty</a>.
   </footer>
