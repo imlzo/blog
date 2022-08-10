@@ -2,7 +2,9 @@ const { DateTime } = require("luxon");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-
+const markdownIt = require("markdown-it");
+const Image = require("@11ty/eleventy-img");
+const path = require('node:path');
 
 module.exports = function(eleventyConfig) {
   // Plugins
@@ -18,7 +20,9 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/img");
+
+  // Markdown
+  eleventyConfig.setLibrary("md", markdownLibrary());
 
   return {
     dir: {
@@ -57,4 +61,56 @@ function postDate(jsDate) {
 // Given date, returns HTML date format
 function htmlDate(jsDate) {
   return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+}
+
+/*
+ * Markdown
+ */
+
+/**
+ * Creates and return markdown renderer
+ */
+function markdownLibrary() {
+  let markdownOptions = {
+    html: true,
+    linkify: true
+  };
+  let markdownLib = markdownIt(markdownOptions);
+  markdownLib.renderer.rules.image = markdownImage;
+  return markdownLib;
+}
+
+/**
+ * Custom renderer for markdown images
+ * https://www.aleksandrhovhannisyan.com/blog/eleventy-image-plugin/
+ */
+function markdownImage(tokens, idx, _options, _env, _self) {
+  const token = tokens[idx];
+  const imgSrc = "src/" + token.attrGet('src');
+  const imgAlt = token.content;
+
+  let widths = [400, 800, 1280];
+  const imgOpts = {
+    widths: [...widths, null],
+    formats: ['webp', 'jpeg'],
+    outputDir: './_site/img/',
+    filenameFormat: (hash, src, width, format, _) => {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+      return `${name}-${width}-${hash}.${format}`;
+    },
+  };
+
+  // Generate image
+  Image(imgSrc, imgOpts);
+
+  // Generate HTML
+  const metadata = Image.statsSync(imgSrc, imgOpts);
+  return Image.generateHTML(metadata, {
+    title: imgAlt,
+    alt: imgAlt,
+    loading: 'lazy',
+    decoding: 'async',
+    sizes: '100vw',
+  });
 }

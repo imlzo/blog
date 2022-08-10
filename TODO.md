@@ -1,6 +1,5 @@
 # TODO
 
-- Should I be using Eleventy Image
 - Style home page
 - Style articles
 - Deploy to interwebs
