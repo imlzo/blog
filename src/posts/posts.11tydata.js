@@ -4,7 +4,7 @@ function isDraft(data) {
 }
 
 function hideDrafts() {
-  return process.env.ELEVENTY_ENV === 'production'
+  return process.env.ELEVENTY_ENV === 'prod'
 }
 
 module.exports = function() {

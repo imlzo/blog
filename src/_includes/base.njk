@@ -22,6 +22,12 @@
       referrerpolicy="no-referrer"/>
   </noscript>
 
+  {% if env.isProd %}
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "53730fff2c444fb29a60d5a8bdd76ad8"}'> </script>
+    <!-- End Cloudflare Web Analytics -->
+  {% endif %}
+
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
 

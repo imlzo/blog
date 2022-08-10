@@ -3,7 +3,6 @@
 - Style home page
 - Style articles
 - Deploy to interwebs
-- GAN
 - Social - Use Github Discussions
 - favicons
 - Some minimal art. Maybe.
@@ -14,3 +13,5 @@
 - Show Updated date in blog posts
 - Show build info on blog
   [reference](https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/)
+- Add robots.txt
+- Add privacy page (on Web Analytics)
