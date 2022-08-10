@@ -5,7 +5,7 @@
 PROJ_ROOT=$(git rev-parse --show-toplevel)
 cd $PROJ_ROOT
 
-DRAFTS=$(rg "^draft: true" -l --glob 'src/posts/**' --sortr created)
+DRAFTS=$(rg "^draft: true" -l --glob 'src/posts/**' --glob '!src/posts/test-post.md' --sortr created)
 
 select f in $DRAFTS; do
   if [ -z $f ]; then
