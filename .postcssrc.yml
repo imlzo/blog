@@ -2,4 +2,5 @@ map: false
 plugins:
   autoprefixer: {}
   postcss-preset-env: {}
+  postcss-nesting: {}
 
