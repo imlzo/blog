@@ -1,7 +1,6 @@
 # TODO
 
 - Should I be using Eleventy Image
-- Migrate github et al to metadata data.
 - Style home page
 - Style articles
 - Deploy to interwebs
@@ -13,3 +12,6 @@
 - Support footnotes
 - Feature ability to add `project` front matter, and create collections based on
   project tag.
+- Show Updated date in blog posts
+- Show build info on blog
+  [reference](https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/)

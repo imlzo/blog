@@ -1,0 +1,10 @@
+{
+  "title": "imlzo - blog",
+  "url": "https://example.com/",
+  "language": "en",
+  "description": "A engineer's blog and diary",
+  "github": {
+    "profileUrl": "https://github.com/imlzo",
+    "blogRepoUrl": "https://github.com/imlzo/blog"
+  }
+}

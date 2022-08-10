@@ -1,13 +1,30 @@
-<!DOCTYPE html5>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}">
+
   <!-- https://cdnjs.com/libraries/prism-themes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css" integrity="sha512-bd1K4DEquIavX49RSZHIE0Ye6RFOVlGLhtGow9KDbLYqOd/ufhshkP0GoJoVR1jqj7FmOffvVIKuq1tcXlN9ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>{{ title }}</title>
+  <link rel="preload"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css"
+    integrity="sha512-bd1K4DEquIavX49RSZHIE0Ye6RFOVlGLhtGow9KDbLYqOd/ufhshkP0GoJoVR1jqj7FmOffvVIKuq1tcXlN9ZA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+  <noscript>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css"
+      integrity="sha512-bd1K4DEquIavX49RSZHIE0Ye6RFOVlGLhtGow9KDbLYqOd/ufhshkP0GoJoVR1jqj7FmOffvVIKuq1tcXlN9ZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+  </noscript>
+
+  <title>{{ title or metadata.title }}</title>
+  <meta name="description" content="{{ description or metadata.description }}">
+
 </head>
 <body>
   <header>
@@ -24,7 +41,7 @@
   </main>
   <hr>
   <footer>
-    <a href="https://github.com/imlzo/blog">Source</a>.
+    <a href="{{ metadata.github.blogRepoUrl }}">Source</a>.
     Built with <a href="https://www.11ty.dev/">11ty</a>.
   </footer>
 </body>
