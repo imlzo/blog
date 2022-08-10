@@ -71,11 +71,9 @@ function htmlDate(jsDate) {
  * Creates and return markdown renderer
  */
 function markdownLibrary() {
-  let markdownOptions = {
+  let markdownLib = markdownIt({
     html: true,
-    linkify: true
-  };
-  let markdownLib = markdownIt(markdownOptions);
+  });
   markdownLib.renderer.rules.image = markdownImage;
   return markdownLib;
 }
