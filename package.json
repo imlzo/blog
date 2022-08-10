@@ -24,6 +24,9 @@
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "cspell": "^6.5.0"
+    "autoprefixer": "^10.4.8",
+    "cspell": "^6.5.0",
+    "eleventy-plugin-postcss": "^1.0.4",
+    "postcss-preset-env": "^7.7.2"
   }
 }

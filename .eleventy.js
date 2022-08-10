@@ -5,12 +5,15 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownIt = require("markdown-it");
 const Image = require("@11ty/eleventy-img");
 const path = require('node:path');
+const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(PostCSSPlugin);
+
 
   // Filters
   eleventyConfig.addFilter("filteredTags", filteredTags)
