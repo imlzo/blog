@@ -6,12 +6,11 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Posts</h1>
-<ul>
+<ul class="post-list">
 {% for post in collections.posts | reverse %}
-  <li>
-    <span>{{ post.date | postDate }}</span>
-    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  <li class="post-item">
+    <span class="post-item-date">{{ post.date | postDate }}</span>
+    <a class="post-item-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
   </li>
 {% endfor %}
 </ul>

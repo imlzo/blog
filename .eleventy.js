@@ -58,7 +58,7 @@ function filteredTags(tags) {
 
 // Given date, returns display date for post
 function postDate(jsDate) {
-  return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat("yyyy LLL dd");
+  return DateTime.fromJSDate(jsDate, {zone: 'utc'}).toFormat("LLL dd");
 }
 
 // Given date, returns HTML date format
