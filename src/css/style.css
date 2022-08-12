@@ -2,6 +2,10 @@
  * Base
  */
 
+@custom-media --small-viewport  (min-width: 425px);
+@custom-media --medium-viewport (min-width: 768px);
+@custom-media --large-viewport  (min-width: 1024px);
+
 :root {
   --bg-color-main: #fff9f3;
 }
@@ -16,28 +20,24 @@ html {
 
 body {
   margin: 16px 8px;
-  @media (min-width: 320px) {
+  @media (--small-viewport) {
     margin: 40px 16px;
   }
-  @media (min-width: 768px) {
+  @media (--medium-viewport) {
     margin: 40px 40px;
   }
-  @media (max-width: 1024x) {
+  @media (--large-viewport) {
     margin: 40px 80px;
   }
 }
 
 header, main, footer {
-  max-width: 600px;
+  max-width: 768px;
 }
 
 main {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  @media (max-width: 320px) {
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 /**
@@ -53,10 +53,10 @@ nav ul {
   flex-direction: row;
   align-items: first baseline;
   /* align-items: bottom; */
-  gap: 0px 25px;
+  gap: 8px;
 
-  @media (max-width: 320px) {
-    gap: 8px;
+  @media (--small-viewport) {
+    gap: 0px 25px;
   }
 }
 
@@ -67,18 +67,20 @@ nav ul {
   }
 
   font-weight: 500;
-  font-size: 20px;
-  @media (max-width: 320px) {
-    font-size: 14px;
+  font-size: 14px;
+  @media (--small-viewport) {
+    font-size: 20px;
   }
+
 
   &:first-child {
     text-decoration: underline;
     font-weight: 700;
     font-size: 20px;
 
-    @media (max-width: 320px) {
-      flex: 100%;
+    flex: 100%;
+    @media (--small-viewport) {
+      flex: 0 1 auto;
     }
   }
 }

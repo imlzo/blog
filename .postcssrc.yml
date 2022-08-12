@@ -3,4 +3,5 @@ plugins:
   autoprefixer: {}
   postcss-preset-env: {}
   postcss-nesting: {}
+  postcss-custom-media: {}
 

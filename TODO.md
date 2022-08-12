@@ -10,12 +10,11 @@
 - favicons
 - Some minimal art. Maybe.
 
-
 ## CSS
 
+- Make fonts all bigger - navigation, body, etc.
 - Style articles
 - Managing font-sizes
-- Managing media queries for responsive layout - [Custom Media](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media)
 - Style visited links and hover
 - Show Updated date in blog posts
 
