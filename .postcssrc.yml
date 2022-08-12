@@ -1,7 +1,11 @@
 map: false
 plugins:
   autoprefixer: {}
-  postcss-preset-env: {}
-  postcss-nesting: {}
-  postcss-custom-media: {}
+  postcss-preset-env: {
+    stage: 2,
+    features: {
+      nesting-rules: true
+    }
+  }
+
 
