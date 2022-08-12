@@ -2,12 +2,15 @@
  * Base
  */
 
-@custom-media --small-viewport  (min-width: 425px);
-@custom-media --medium-viewport (min-width: 768px);
-@custom-media --large-viewport  (min-width: 1024px);
+@custom-media --min-width-small  (min-width: 425px);
+@custom-media --max-width-small  (max-width: 424px);
+@custom-media --min-width-medium (min-width: 768px);
+@custom-media --min-width-large  (min-width: 1024px);
 
 :root {
   --bg-color-main: #fff9f3;
+  --content-width: 768px;
+  --color-text-primary: black;
 }
 
 html {
@@ -19,25 +22,30 @@ html {
 }
 
 body {
-  margin: 16px 8px;
-  @media (--small-viewport) {
+  margin: 16px 16px;
+  @media (--min-width-small) {
     margin: 40px 16px;
   }
-  @media (--medium-viewport) {
+  @media (--min-width-medium) {
     margin: 40px 40px;
   }
-  @media (--large-viewport) {
+  @media (--min-width-large) {
     margin: 40px 80px;
   }
 }
 
 header, main, footer {
-  max-width: 768px;
+  max-width: var(--content-width);
 }
 
 main {
-  padding-top: 10px;
+  padding-top: 16px;
   padding-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /**
@@ -52,35 +60,37 @@ nav ul {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: first baseline;
-  /* align-items: bottom; */
-  gap: 8px;
 
-  @media (--small-viewport) {
+  gap: 8px;
+  @media (--min-width-small) {
     gap: 0px 25px;
   }
 }
 
 .nav-item {
+  --font-size: 24px;
+  --font-size-small: 18px;
+
   & > a {
-    color: black;
+    color: var(--color-text-primary);
     text-decoration: none;
   }
 
+  font-size: var(--font-size);
   font-weight: 500;
-  font-size: 14px;
-  @media (--small-viewport) {
-    font-size: 20px;
-  }
-
 
   &:first-child {
     text-decoration: underline;
     font-weight: 700;
-    font-size: 20px;
+  }
 
-    flex: 100%;
-    @media (--small-viewport) {
-      flex: 0 1 auto;
+  /* Layout on two lines if small */
+  @media (--max-width-small) {
+    &:first-child {
+      flex: 100%;
+    }
+    &:not(:first-child) {
+      font-size: var(--font-size-small);
     }
   }
 }
@@ -89,7 +99,7 @@ nav ul {
  * Main
  */
 
-main h1 {
+main {
   margin-top: 0px;
 }
 
@@ -116,22 +126,16 @@ main h1 {
   min-width: 60px;
 }
 
-a {
-  /* color: #118bee; */
-}
-
 .post-item-title {
   text-decoration: none;
   font-weight: 500;
-  font-size: 16px;
-  color: black;
+  font-size: 18px;
+  color: var(--color-text-primary);
 
+  /* Read / Unread Decoration */
   padding-left: 8px;
   border-left: 4px solid;
-  /* border-color: #dddddd; */
-  /* border-color: #118bee; */
   border-color: rgb(0, 0, 238, 0.8);
-
   &:visited {
     border-color: rgb(85, 26, 139, 0.8);
   }
@@ -144,16 +148,11 @@ a {
 
 footer {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 16px;
+
+  & hr + p {
+    padding-top: 8px;
+  }
 }
 
-/**
- *
- */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
 
