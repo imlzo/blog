@@ -107,11 +107,16 @@ function markdownImage(tokens, idx, _options, _env, _self) {
 
   // Generate HTML
   const metadata = Image.statsSync(imgSrc, imgOpts);
-  return Image.generateHTML(metadata, {
+  const innerHtml = Image.generateHTML(metadata, {
     title: imgAlt,
     alt: imgAlt,
     loading: 'lazy',
     decoding: 'async',
     sizes: '100vw',
   });
+
+  // Find URL from last jpeg img
+  const jpegImgs = metadata['jpeg'];
+  const url = jpegImgs[jpegImgs.length - 1].url;
+  return `<a href="${url}">${innerHtml}</a>`;
 }
