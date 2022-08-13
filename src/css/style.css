@@ -2,10 +2,10 @@
  * Base
  */
 
-@custom-media --min-width-small  (min-width: 425px);
-@custom-media --max-width-small  (max-width: 424px);
+@custom-media --min-width-small (min-width: 425px);
+@custom-media --max-width-small (max-width: 424px);
 @custom-media --min-width-medium (min-width: 768px);
-@custom-media --min-width-large  (min-width: 1024px);
+@custom-media --min-width-large (min-width: 1024px);
 
 :root {
   --bg-color-main: #fff9f3;
@@ -15,9 +15,9 @@
 
 html {
   /* https://systemfontstack.com/ */
-  font-family: -apple-system, BlinkMacSystemFont, avenir next,
-    avenir, segoe ui, helvetica neue, helvetica, Cantarell,
-    Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
   background-color: var(--bg-color-main);
 }
 
@@ -34,7 +34,9 @@ body {
   }
 }
 
-header, main, footer {
+header,
+main,
+footer {
   max-width: var(--content-width);
 }
 
@@ -141,7 +143,6 @@ main {
   }
 }
 
-
 /**
  * Footer
  */
@@ -154,5 +155,3 @@ footer {
     padding-top: 8px;
   }
 }
-
-

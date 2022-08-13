@@ -12,7 +12,6 @@
 
 ## CSS
 
-- Make fonts all bigger - navigation, body, etc.
 - Style articles
 - Managing font-sizes
 - Style visited links and hover

@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "spellcheck": "npx cspell src/**/*",
     "grammarcheck": "npx write-good src/**/*",
-    "check": "npm run spellcheck && npm run grammarcheck"
+    "check": "npm run spellcheck && npm run grammarcheck",
+    "prettier": "npx prettier --write ."
   },
   "keywords": [],
   "author": "imlzo",
@@ -28,6 +29,7 @@
     "cspell": "^6.5.0",
     "eleventy-plugin-postcss": "^1.0.4",
     "postcss": "^8.4.16",
-    "postcss-preset-env": "^7.7.2"
+    "postcss-preset-env": "^7.7.2",
+    "prettier": "2.7.1"
   }
 }

@@ -23,12 +23,12 @@ $ npm run serve:dev # serve for dev (w/ drafts)
 
 ## Structure
 
-- `posts/*.md`:     Individual blog posts.
-- `readme.md`:      README for website. Distinct from this README.md.
-- `base.njk`:       Base template. Contains headers and footers.
-- `post.njk`:       Post template. Has post heading. Extends `base.njk`
-- `tags.njk`:       Page displaying all tags
-- `tag.njk`:        Template for specific tag
+- `posts/*.md`: Individual blog posts.
+- `readme.md`: README for website. Distinct from this README.md.
+- `base.njk`: Base template. Contains headers and footers.
+- `post.njk`: Post template. Has post heading. Extends `base.njk`
+- `tags.njk`: Page displaying all tags
+- `tag.njk`: Template for specific tag
 
 ## Creating Posts
 
@@ -49,4 +49,3 @@ $ npm run check
 $ npm run spellcheck
 $ npm run grammarcheck
 ```
-
