@@ -10,7 +10,8 @@
 :root {
   --content-width: 768px;
   --color-bg-main: #fff9f3;
-  --color-bg-button: #634EC8;
+  --color-bg-button: #634ec8;
+  --color-bg-button-hover: #9386d5;
   --color-text-button: #fffffe;
 
   --color-text-primary: black;
@@ -222,6 +223,9 @@ footer {
 
   &:visited {
     color: var(--color-text-button);
+  }
+  &:hover {
+    background-color: var(--color-bg-button-hover);
   }
 }
 
