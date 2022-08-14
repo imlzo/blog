@@ -13,6 +13,7 @@
 - Post: Show Updated date in blog posts
 - Social: Use GitHub discussions
 - Post: Link to Github source
+- Tags: Style tag page
 
 ## Logistics
 
@@ -21,4 +22,3 @@
 - CloudFlare
 - Show build info on blog [reference](https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/)
 - Use todo.txt for fun.
-

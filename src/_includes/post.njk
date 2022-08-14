@@ -9,7 +9,7 @@ layout: base.njk
   <div class="post-tags">
     {%- for tag in tags | filteredTags %}
     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <a class="post-tag-token" href="{{ tagUrl | url }}">{{ tag }}</a>
+      <a class="post-tag-token" href="{{ tagUrl | url }}">#{{ tag }}</a>
     {% endfor %}
   </div>
 

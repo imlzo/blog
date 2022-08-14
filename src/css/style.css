@@ -8,9 +8,11 @@
 @custom-media --min-width-large (min-width: 1024px);
 
 :root {
-  /* --bg-color-main: #fff9f3; */
-  --bg-color-main: #f2f7f5;
   --content-width: 768px;
+  --color-bg-main: #fff9f3;
+  --color-bg-button: #634EC8;
+  --color-text-button: #fffffe;
+
   --color-text-primary: black;
   --color-text-secondary: #6a6a6a;
   --color-text-link: rgb(0, 0, 238);
@@ -20,6 +22,7 @@
   --font-size-title: 1.5rem; /* 24px */
   --font-size-post-title: 1.125rem; /* 18px */
   --font-size-post-date: 1rem; /* 16px */
+  --font-size-post-token: 0.8rem; /* 16px */
 }
 
 html {
@@ -27,7 +30,7 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
     helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
     sans-serif;
-  background-color: var(--bg-color-main);
+  background-color: var(--color-bg-main);
 }
 
 h1,
@@ -42,7 +45,7 @@ h6 {
 body {
   margin: 16px 16px;
   @media (--min-width-small) {
-    margin: 40px 16px;
+    margin: 40px 24px;
   }
   @media (--min-width-medium) {
     margin: 40px 40px;
@@ -208,10 +211,19 @@ footer {
 }
 
 .post-tag-token {
-  background-color: 
+  color: var(--color-text-button);
+  background-color: var(--color-bg-button);
+  text-decoration: none;
+  font-size: var(--font-size-post-token);
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 2px;
+
+  &:visited {
+    color: var(--color-text-button);
+  }
 }
 
 .post-tags {
   margin: 6px 0px;
 }
-
