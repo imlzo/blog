@@ -14,6 +14,7 @@
 - Social: Use GitHub discussions
 - Post: Link to Github source
 - Tags: Style tag page
+- Post: Linking to headlines within posts easily
 
 ## Logistics
 
