@@ -17,7 +17,8 @@ module.exports = function (eleventyConfig) {
   // Filters
   eleventyConfig.addFilter("filteredTags", filteredTags);
   eleventyConfig.addFilter("allTags", allTags);
-  eleventyConfig.addFilter("postDate", postDate);
+  eleventyConfig.addFilter("postDateShort", postDateShort);
+  eleventyConfig.addFilter("postDateLong", postDateLong);
   eleventyConfig.addFilter("htmlDate", htmlDate);
 
   // Passthrough copy
@@ -59,8 +60,13 @@ function filteredTags(tags) {
 }
 
 // Given date, returns display date for post
-function postDate(jsDate) {
+function postDateShort(jsDate) {
   return DateTime.fromJSDate(jsDate, { zone: "utc" }).toFormat("LLL dd");
+}
+
+// Given date, returns display date for post
+function postDateLong(jsDate) {
+  return DateTime.fromJSDate(jsDate, { zone: "utc" }).toFormat("LLL dd yyyy");
 }
 
 // Given date, returns HTML date format

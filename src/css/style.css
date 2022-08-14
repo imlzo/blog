@@ -194,11 +194,24 @@ footer {
  * Post body
  */
 
+.post-title {
+  font-size: var(--font-size-title);
+  margin-bottom: 6px;
+}
+
 .post-body {
   line-height: 1.6;
 }
 
-.post-title {
-  font-size: var(--font-size-title);
-  margin: 8px 0px;
+.post-date {
+  color: var(--color-text-secondary);
 }
+
+.post-tag-token {
+  background-color: 
+}
+
+.post-tags {
+  margin: 6px 0px;
+}
+
