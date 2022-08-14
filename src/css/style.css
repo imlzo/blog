@@ -153,7 +153,6 @@ main {
   font-weight: 400;
   font-size: var(--font-size-post-date);
   color: var(--color-text-secondary);
-  min-width: 60px;
 }
 
 a.post-item-title {
@@ -161,6 +160,7 @@ a.post-item-title {
   font-weight: 500;
   font-size: var(--font-size-post-title);
   color: var(--color-text-primary);
+  margin: 0px 10px;
 
   &:visited {
     color: var(--color-text-primary);
