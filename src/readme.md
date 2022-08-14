@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: README
+title: README.md
 tags: posts
 eleventyNavigation:
   key: readme
