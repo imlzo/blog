@@ -1,6 +1,9 @@
 # Blog
 
-imlzo's personal blog
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b19fcb80-7228-40d4-b186-43d28e37e93a/deploy-status)](https://app.netlify.com/sites/charming-melomakarona-87dc6e/deploys)
+
+imlzo's personal blog at [imlzo.com](www.imlzo.com).
+
 
 ## Building
 

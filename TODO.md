@@ -15,6 +15,9 @@
 - Post: Link to Github source
 - Tags: Style tag page
 - Post: Linking to headlines within posts easily
+- Tags: Revive tag pages
+- Deploy: Cloudflare SSL
+  [URL](https://www.mikestreety.co.uk/blog/setting-up-a-custom-domain-with-netlify-with-cloudflare-ssl/)
 
 ## Logistics
 
