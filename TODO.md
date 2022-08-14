@@ -14,7 +14,6 @@
 
 - Style articles
 - Managing font-sizes
-- Style visited links and hover
 - Show Updated date in blog posts
 
 ## Logistics

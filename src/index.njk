@@ -6,12 +6,15 @@ eleventyNavigation:
   order: 1
 ---
 
-<ul class="post-list">
-{% for post in collections.posts | reverse %}
-  <li class="post-item">
-    <span class="post-item-date">{{ post.date | postDate }}</span>
-    <a class="post-item-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-  </li>
+{% for year, posts in collections.postsByYear %}
+  <h2>{{ year }}</h2>
+  <ul class="post-list">
+    {% for post in posts %}
+    <li class="post-item">
+      <span class="post-item-date">{{ post.date | postDate }}</span>
+      <a class="post-item-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
-</ul>
 

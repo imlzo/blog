@@ -26,6 +26,9 @@ module.exports = function (eleventyConfig) {
   // Markdown
   eleventyConfig.setLibrary("md", markdownLibrary());
 
+  // Collections
+  eleventyConfig.addCollection("postsByYear", postsByYear);
+
   return {
     dir: {
       input: "src",
@@ -118,4 +121,21 @@ function markdownImage(tokens, idx, _options, _env, _self) {
   const jpegImgs = metadata["jpeg"];
   const url = jpegImgs[jpegImgs.length - 1].url;
   return `<a href="${url}">${innerHtml}</a>`;
+}
+
+/**
+ * Collections
+ */
+
+// Group posts into collections of [year, postsForYear]
+function postsByYear(collection) {
+  const posts = collection.getFilteredByTag("posts").reverse();
+  const years = posts.map((post) => post.date.getFullYear());
+  const uniqueYears = [...new Set(years)];
+  return uniqueYears.reduce((prev, year) => {
+    const filteredPosts = posts.filter(
+      (post) => post.date.getFullYear() === year
+    );
+    return [...prev, [year, filteredPosts]];
+  }, []);
 }
