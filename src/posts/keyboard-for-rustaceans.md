@@ -53,7 +53,8 @@ provides.
 Few learnings:
 
 - Design Rules Checker is my friend. For KiCad it's in `Inspect` menu.
-- Use `CMD+E` to edit footprints - e.g. scaling, rotating, flipping Ferris art.
+- Use `E` and `CMD+E` to edit footprints - e.g. scaling, rotating, flipping
+  Ferris art.
 
 After some fiddling, I have my dream keyboard PCB. It features a total 3x
 Ferrises - two on the front soldermask, and one on the back screenprint. Art by
