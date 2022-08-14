@@ -3,18 +3,17 @@
 ## Feature
 
 - Deploy to interwebs
-- Social - Use Github Discussions
 - Feature ability to add `project` front matter, and create collections based on
   project tag.
-- Update readme post with "about me" section, highlighting some core thoughts.
-- favicons
-- Some minimal art. Maybe.
+- Some art
 
-## CSS
+## Tweaks
 
-- Style articles
-- Managing font-sizes
-- Show Updated date in blog posts
+- Post: Show year in date
+- Post: Style tags
+- Post: Show Updated date in blog posts
+- Social: Use GitHub discussions
+- Post: Link to Github source
 
 ## Logistics
 
@@ -22,3 +21,4 @@
 - Add privacy page (on Web Analytics)
 - CloudFlare
 - Show build info on blog [reference](https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/)
+

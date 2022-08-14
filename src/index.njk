@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 
 {% for year, posts in collections.postsByYear %}
-  <h2>{{ year }}</h2>
+  <h2 class="post-year">{{ year }}</h2>
   <ul class="post-list">
     {% for post in posts %}
     <li class="post-item">

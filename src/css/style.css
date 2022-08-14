@@ -16,6 +16,10 @@
   --color-text-link: rgb(0, 0, 238);
   --color-text-link-visited: #636;
   --color-text-link-hover: #666;
+
+  --font-size-title: 1.5rem; /* 24px */
+  --font-size-post-title: 1.125rem; /* 18px */
+  --font-size-post-date: 1rem; /* 16px */
 }
 
 html {
@@ -125,6 +129,10 @@ main {
   margin-top: 0px;
 }
 
+.post-year {
+  font-size: var(--font-size-title);
+}
+
 .post-list {
   margin: 0px;
   padding: 0px;
@@ -143,7 +151,7 @@ main {
 .post-item-date {
   display: inline-block;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-post-date);
   color: var(--color-text-secondary);
   min-width: 60px;
 }
@@ -151,7 +159,7 @@ main {
 a.post-item-title {
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px;
+  font-size: var(--font-size-post-title);
   color: var(--color-text-primary);
 
   &:visited {
@@ -175,9 +183,22 @@ a {
 
 footer {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
 
   & hr + p {
     padding-top: 8px;
   }
+}
+
+/**
+ * Post body
+ */
+
+.post-body {
+  line-height: 1.6;
+}
+
+.post-title {
+  font-size: var(--font-size-title);
+  margin: 8px 0px;
 }
