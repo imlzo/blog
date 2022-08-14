@@ -235,3 +235,10 @@ footer {
 .post-tags {
   margin: 6px 0px;
 }
+
+code:not(pre > code) {
+  border-radius: 5px;
+  border: 1px solid #bcbec0;
+  padding: 2px;
+  font: 12px Monaco, Consolas, "Andale  Mono", "DejaVu Sans Mono", monospace;
+}
