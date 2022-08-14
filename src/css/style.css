@@ -208,7 +208,14 @@ footer {
 }
 
 .post-body {
-  line-height: 1.6;
+  line-height: 1.5;
+
+  & p:first-child {
+    margin-top: 24px;
+  }
+  & h2 {
+    margin-top: 16px;
+  }
 }
 
 .post-date {
