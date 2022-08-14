@@ -8,9 +8,14 @@
 @custom-media --min-width-large (min-width: 1024px);
 
 :root {
-  --bg-color-main: #fff9f3;
+  /* --bg-color-main: #fff9f3; */
+  --bg-color-main: #f2f7f5;
   --content-width: 768px;
   --color-text-primary: black;
+  --color-text-secondary: #6a6a6a;
+  --color-text-link: rgb(0, 0, 238);
+  --color-text-link-visited: #636;
+  --color-text-link-hover: #666;
 }
 
 html {
@@ -73,9 +78,15 @@ nav ul {
   --font-size: 24px;
   --font-size-small: 18px;
 
-  & > a {
+  & a {
     color: var(--color-text-primary);
     text-decoration: none;
+    &:visited {
+      color: var(--color-text-primary);
+    }
+    &:hover {
+      color: var(--color-text-link-hover);
+    }
   }
 
   font-size: var(--font-size);
@@ -124,22 +135,28 @@ main {
   display: inline-block;
   font-weight: 400;
   font-size: 16px;
-  color: #7d7d7d;
+  color: var(--color-text-secondary);
   min-width: 60px;
 }
 
-.post-item-title {
+a.post-item-title {
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
   color: var(--color-text-primary);
 
-  /* Read / Unread Decoration */
-  padding-left: 8px;
-  border-left: 4px solid;
-  border-color: rgb(0, 0, 238, 0.8);
   &:visited {
-    border-color: rgb(85, 26, 139, 0.8);
+    color: var(--color-text-primary);
+  }
+  &:hover {
+    color: var(--color-text-link-hover);
+  }
+}
+
+a {
+  color: var(--color-text-link);
+  &:visited {
+    color: var(--color-text-link-visited);
   }
 }
 
