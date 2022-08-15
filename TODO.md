@@ -9,7 +9,6 @@
 
 ## Tweaks
 
-- Post: Style tags
 - Post: Show Updated date in blog posts
 - Social: Use GitHub discussions
 - Post: Link to Github source
@@ -23,6 +22,5 @@
 
 - Add robots.txt
 - Add privacy page (on Web Analytics)
-- CloudFlare
 - Show build info on blog [reference](https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/)
 - Use todo.txt for fun.
