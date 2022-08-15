@@ -161,6 +161,7 @@ main {
   font-size: var(--font-size-post-date);
   color: var(--color-text-secondary);
   white-space: nowrap;
+  min-width: 3.35em;
 }
 
 a.post-item-title {
