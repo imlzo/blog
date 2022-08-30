@@ -23,7 +23,7 @@ This build involved:
 2. Installing mill-max sockets for hotswap switch support.
 3. Soldering the nice!nanos, battery, and power switch.
 
-After a night of two of diligent hacking, I had a quiet, low-profile, wireless,
+After a night of diligent hacking, I had a quiet, low-profile, wireless,
 hotswap, split 32-key shrine for Ferris the Crab.
 
 Next up is the firmware.
