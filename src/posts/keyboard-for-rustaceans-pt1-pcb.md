@@ -37,7 +37,7 @@ ProMicro-like daughterboard - (almost) no surface mount components are needed.
 Instead of a [matrix circuit](https://docs.qmk.fm/#/how_a_matrix_works) with
 many diodes, each switch is wired directly to the controller:
 
-![Schematic for Sweep](/img/ferris-keyboard-schematic.png)
+![Schematic for Sweep](/img/ferris_keyboard_schematic.png)
 
 For this keyboard to be exactly what I wanted, I only needed to make two
 modifications:
@@ -63,7 +63,7 @@ Ferrises - two on the front soldermask, and one on the back screenprint. Art by
 The edited KiCad files are available on
 [Github](https://github.com/imlzo/Sweep).
 
-![The Final Keyboard PCB](/img/ferris-keyboard-render.png)
+![The Final Keyboard PCB](/img/ferris_keyboard_render.png)
 
 ## What's Next?
 

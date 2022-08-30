@@ -3,9 +3,15 @@
 ## Feature
 
 - Deploy to interwebs
-- Feature ability to add `project` front matter, and create collections based on
-  project tag.
 - Some art
+
+## Project
+
+- Post: Project Grouping via Front Matter
+- Project: Project Page
+- Project: Project Post Navigation
+- Feature ability to add `project` front matter, and create collections based on
+  project tag. Add "next" and "prev" to project posts
 
 ## Tweaks
 
